@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "id": "2",
+      "title": "Setup local development environment",
+      "completed": false
+    },
+    {
+      "title": "Data For Task Manager Practice",
+      "completed": false,
+      "id": "PG6WNbj"
+    }
+  ]
+}
