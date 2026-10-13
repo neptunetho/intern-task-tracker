@@ -10,26 +10,27 @@ defineEmits(['toggle-task', 'delete-task'])
 </script>
 
 <template>
-  <li style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 14px; margin-bottom: 8px; background: #1f2937; border-radius: 6px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex: 1;">
-      <!-- When clicked, notify parent to toggle -->
+  <div class="flex items-center justify-between gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800/80 hover:border-slate-700 transition-colors">
+    <label class="flex items-center gap-3 flex-1 min-w-0 cursor-pointer select-none">
       <input
         type="checkbox"
         :checked="task.completed"
         @change="$emit('toggle-task', task)"
-        style="cursor: pointer;"
+        class="w-4 h-4 rounded border-slate-700 bg-slate-900 text-indigo-600 accent-indigo-600 cursor-pointer"
       />
-      <span :style="{ textDecoration: task.completed ? 'line-through' : 'none', color: task.completed ? '#9ca3af' : 'white' }">
+      <span
+        class="text-sm truncate transition-colors"
+        :class="task.completed ? 'line-through text-slate-500' : 'text-slate-200'"
+      >
         {{ task.title }}
       </span>
-    </div>
+    </label>
 
-    <!-- When clicked, notify parent to delete -->
     <button
       @click="$emit('delete-task', task.id)"
-      style="background: #ef4444; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; flex-shrink: 0;"
+      class="rounded-lg bg-rose-500/10 hover:bg-rose-500 text-rose-400 hover:text-white px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer"
     >
       Delete
     </button>
-  </li>
+  </div>
 </template>

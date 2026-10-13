@@ -24,22 +24,22 @@ function handleSubmit() {
 </script>
 
 <template>
-  <form @submit.prevent="handleSubmit" style="margin-bottom: 24px;">
-    <div style="display: flex; gap: 8px;">
+  <form @submit.prevent="handleSubmit" class="space-y-2">
+    <div class="flex items-center gap-3">
       <input
         v-model="newTaskTitle"
         placeholder="Enter a task (3-50 chars)..."
-        style="flex: 1; padding: 10px 12px; border-radius: 6px; border: 1px solid #4b5563; background: #1f2937; color: white;"
+        class="flex-1 rounded-xl bg-slate-950/60 border border-slate-800 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
       />
       <button
         type="submit"
-        style="padding: 10px 18px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;"
+        class="rounded-xl bg-indigo-600 hover:bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors cursor-pointer"
       >
         Add
       </button>
     </div>
 
-    <p v-if="errorMessage" style="color: #ef4444; font-size: 0.875rem; margin: 6px 0 0 0;">
+    <p v-if="errorMessage" class="text-xs text-rose-400 pl-1">
       ⚠️ {{ errorMessage }}
     </p>
   </form>
