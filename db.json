@@ -1,14 +1,34 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "title": "Setup local development environment",
-      "completed": false
+      "title": "TEST1",
+      "dueDate": "2026-10-15",
+      "createdAt": "14/10/2026",
+      "completed": true,
+      "id": "X8JRHy4FIjI"
     },
     {
-      "title": "Data For Task Manager Practice",
+      "title": "TEST2",
+      "dueDate": "2026-10-30",
+      "createdAt": "14/10/2026",
       "completed": false,
-      "id": "PG6WNbj"
+      "id": "UbUjDiwo780"
+    },
+    {
+      "title": "TEST3",
+      "dueDate": "2026-10-31",
+      "createdAt": "14/10/2026",
+      "completed": true,
+      "id": "V9SOLJIwM64"
+    },
+    {
+      "title": "Test4",
+      "description": "Adding description section",
+      "dueDate": "2026-10-16",
+      "createdAt": "14/10/2026",
+      "completed": false,
+      "id": "BdaOZKl3YJU"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
