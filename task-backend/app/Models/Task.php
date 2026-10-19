@@ -15,4 +15,8 @@ class Task extends Model
         'due_date',
         'completed',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

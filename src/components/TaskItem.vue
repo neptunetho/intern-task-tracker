@@ -55,13 +55,13 @@ function formatDate(dateStr) {
 
     <div class="flex items-center justify-between text-[11px] text-slate-500 border-t border-slate-800/50 pt-2">
       <div>
-        <span v-if="task.dueDate" class="text-amber-400/90 font-medium">
-          Due: {{ formatDate(task.dueDate) }}
+       <span v-if="task.due_date" class="text-amber-400/90 font-medium">
+          Due: {{ formatDate(task.due_date) }}
         </span>
       </div>
 
-      <span v-if="task.createdAt">
-        Created on: {{ task.createdAt }}
+      <span v-if="task.created_at">
+        Created on: {{ formatDate(task.created_at.slice(0, 10)) }}
       </span>
     </div>
   </div>
