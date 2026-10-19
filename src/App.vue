@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import TaskForm from './components/TaskForm.vue'
 import TaskItem from './components/TaskItem.vue'
 
-const API_URL = 'http://localhost:3000/tasks'
+const API_URL = 'http://127.0.0.1:8000/api/tasks'
 
 const tasks = ref([])
 const pendingTasks = computed(() => tasks.value.filter(t => !t.completed))
